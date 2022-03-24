@@ -13,9 +13,10 @@ class SessionsController < ApplicationController
         #authenticates user credentials
         if @user && @user.authenticate(params[:password])
             #set session and redirect on success
-            session[:user_id] = @user.id 
+            session[:user_id] = @user.id
+            flash[:notice] = "You're in! :D"
             redirect_to '/wonder'
-
+            
         else
             #returns to login page with error message
             message = "Try Again"
@@ -34,6 +35,7 @@ class SessionsController < ApplicationController
 
     def destroy
         session.delete :user_id
+        flash[:notice] = "You have been logged out D:"
         redirect_to '/'
     end
 

@@ -1,6 +1,8 @@
 <h1>Welcome to Wonders of the World!</h1>
 <% @locations.each do |location| %>
-    <div> 
-        <% link_to location.country_name, location_path(location) %>
-    </div>
+    <ul>
+    <%= link_to location.continent%> 
+    <%= link_to location.country_name%>
+    <%= link_to location.city_name%>
+    </ul>
 <% end %>

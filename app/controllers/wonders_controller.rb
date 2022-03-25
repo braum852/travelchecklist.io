@@ -1,0 +1,3 @@
+class WondersController < ApplicationController
+
+end

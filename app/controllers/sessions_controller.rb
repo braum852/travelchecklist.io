@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
             #set session and redirect on success
             session[:user_id] = @user.id
             flash[:notice] = "You're in! :D"
-            redirect_to '/wonder'
+            redirect_to '/home'
             
         else
             #returns to login page with error message
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
 
     end
 
-    def wonder
+    def home
 
     end
 

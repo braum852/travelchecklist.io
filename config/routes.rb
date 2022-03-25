@@ -18,3 +18,8 @@ Rails.application.routes.draw do
   
 
 end
+
+#location_wonders GET    /locations/:location_id/wonders(.:format)                                                         wonders#index
+# location_wonder GET    /locations/:location_id/wonders/:id(.:format)                                                     wonders#show
+#  locations GET    /locations(.:format)                                                                              locations#index
+#   location GET    /locations/:id(.:format)                                                                          locations#show
